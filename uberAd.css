@@ -1,0 +1,66 @@
+#assignmentWrapper{
+
+}
+#originalImage
+{
+  width: 300px;
+  height: 250px;
+  margin: 0 auto;
+  width: 100%;
+}
+#uberWrapper
+{
+   background-color: #04030f  ;
+   color: white;
+   width: 300px;
+   height: 250px;
+   float: left;
+}
+
+#divBorder
+{
+  text-align: center;
+  background-color: #04030f  ;
+  border-style: solid;
+  border-color: #1ca5c0;
+  margin: 5px 10px 10px 10px;
+  font-family: "Verdana";
+  padding-bottom: 20px;
+  
+}
+
+legend
+{
+  font-size: 1.00em;
+}
+
+#divCarPic
+{
+
+}
+
+#divMakeExtraMoney
+{
+  font-size: 1.1em;
+  font-family: "Helvetica";
+}
+
+#divStartEarning
+{
+  font-size: 0.6em;
+  padding: 5px 5px 10px 5px;
+}
+
+#divDriveWithUber
+{
+  background-color: #1ca5c0;
+  width: 125px;
+  padding: 8px;
+  bottom: 200px;
+  margin: auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 2px;
+  font-family: "helvetica";
+  font-size: 0.7em;
+}

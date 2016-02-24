@@ -1,0 +1,46 @@
+
+<html>
+    <head>
+        <title>JavaScript Tabs</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="tabs.js"></script>
+        <link href="tabs.css" type="text/css" rel="stylesheet"/>
+    </head>
+    <body onload="initTabs()">
+       <ul id="tabs">
+            <li><a href="#about">Home</a></li>
+            <li><a href="#advantages">Assignments</a></li>
+            <li><a href="#usage">Tennis</a></li>
+        </ul>
+
+        <div class="tabContent" id="about">
+            <h2>Welcome to Meghan's Website!</h2>
+            <div>
+                <p>I am a senior Computer Engineering Major at Ohio Northern Unversity!</p>
+                <p>This website is for a class called Net Centric Computing and will be updated throughout the course!</p>
+            </div>
+        </div>
+        <div class="tabContent" id="advantages">
+            <h2>Assignments Meghan has completed:</h2>
+            <div>
+		<a href= "http://ncletizia.onucs.org/helloWorld.html"> 1.) Hello World </a> 
+			<p> For this assignment, we had to create our FTP connection and write code to show "Hello, World" on the page. </p>
+		<a href= "http://ncletizia.onucs.org/uberAd.html"> 2.) My Advertisment </a>
+			<p> For this assignment, we had to duplicate an advertisement we found using HTML and CSS. </p>
+                <a href= "http://ncletizia.onucs.org/tabs.css"> 3.) Annotating CSS </a>
+			<p> For this assignment, we had to add comments to a CSS document describing the styling and purposes of each command. </p>
+		<a href= "http://ncletizia.onucs.org/index.html"> 4.) Create a Website </a>
+			<p> For this assignment, we created this website! </p>
+            </div>
+        </div>
+        <div class="tabContent" id="usage">
+            <h2>Usage of JavaScript tabs</h2>
+            <div>
+                <p>JavaScript tabs partition your Web page content into tabbed sections. Only one section at a time is visible.</p>
+                <p>The code is written in such a way that the page degrades gracefully in browsers that don't support JavaScript or CSS.</p>
+            </div>
+        </div>
+	<span id="github"><a href="https://github.com/m-letizia" target="_blank">My GitHub address</a></span>
+	</body>
+</html>
