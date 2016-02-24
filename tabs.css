@@ -6,8 +6,8 @@ body
 ul#tabs 
 { 
     list-style-type: none;                  /* No bullets                     */
-    margin: 300px 0 0 0;                    /* Positive top margin            */
-    padding: 0 0 0.3em 0;                   /* Bottom padding on tabs to make */
+    margin: 30px 0 0 0;                     /* Positive top margin            */
+    padding: 0 10px 0.3em 0;                /* Bottom padding on tabs to make */
                                             /* them adjacent to the content   */
 }
 ul#tabs li 
@@ -46,7 +46,7 @@ div.tabContent
 { 
     border: 1px solid #c9c3ba;              /* The tab will have a solid 1px border that is #c9c3ba */
     padding: 0.5em;                         /* Padding is .5em on all sides                         */
-                                            /* .5em means 1/2 the size of the current font          */
+    padding-bottom: 700px;              /* .5em means 1/2 the size of the current font          */
     background-color: #f1f0ee;              /* The background color is #f1f0ee                      */
 }
 

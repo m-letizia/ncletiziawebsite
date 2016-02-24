@@ -11,7 +11,7 @@
        <ul id="tabs">
             <li><a href="#about">Home</a></li>
             <li><a href="#advantages">Assignments</a></li>
-            <li><a href="#usage">Tennis</a></li>
+            <li><a href="#usage">Quiz</a></li>
         </ul>
 
         <div class="tabContent" id="about">
@@ -24,23 +24,43 @@
         <div class="tabContent" id="advantages">
             <h2>Assignments Meghan has completed:</h2>
             <div>
-		<a href= "http://ncletizia.onucs.org/helloWorld.html"> 1.) Hello World </a> 
+		<a href= "http://ncletizia.onucs.org/helloWorld.html" target="_blank"> 1.) Hello World </a>
 			<p> For this assignment, we had to create our FTP connection and write code to show "Hello, World" on the page. </p>
-		<a href= "http://ncletizia.onucs.org/uberAd.html"> 2.) My Advertisment </a>
+		<a href= "http://ncletizia.onucs.org/uberAd.html" target="_blank"> 2.) My Advertisment </a>
 			<p> For this assignment, we had to duplicate an advertisement we found using HTML and CSS. </p>
-                <a href= "http://ncletizia.onucs.org/tabs.css"> 3.) Annotating CSS </a>
+                <a href= "http://ncletizia.onucs.org/tabs.css" target="_blank"> 3.) Annotating CSS </a>
 			<p> For this assignment, we had to add comments to a CSS document describing the styling and purposes of each command. </p>
-		<a href= "http://ncletizia.onucs.org/index.html"> 4.) Create a Website </a>
+		<a href= "http://ncletizia.onucs.org/index.html" > 4.) Create a Website </a>
 			<p> For this assignment, we created this website! </p>
             </div>
         </div>
         <div class="tabContent" id="usage">
-            <h2>Usage of JavaScript tabs</h2>
+            <h2>Two truths and a lie- can you guess the right one is the lie?</h2>
             <div>
-                <p>JavaScript tabs partition your Web page content into tabbed sections. Only one section at a time is visible.</p>
-                <p>The code is written in such a way that the page degrades gracefully in browsers that don't support JavaScript or CSS.</p>
+                <button onclick="myOneFunction()">1</button><span> Meghan has a pet fish names felicia.</span>
+                <p><button onclick="myTwoFunction()">2</button><span> Meghan is a twin.</span></p>
+                <p><button onclick="myThreeFunction()">3</button><span> Meghan broke her finger walking up the steps.</span></p>
+
+                <script>
+                    function myOneFunction() {
+                        alert("Congrats- Meghan does not have a pet fish names Felicia!!!");
+                    }
+
+                </script>
+                <script>
+                    function myTwoFunction() {
+                        alert("This is actually true- Meghan is indeed a twin!!!");
+                    }
+
+                </script>
+                <script>
+                    function myThreeFunction() {
+                        alert("This is actually true, Meghan does not want to admit but she did fall up the stairs and break her finger growing up!");
+                    }
+
+                </script>
             </div>
         </div>
-	<span id="github"><a href="https://github.com/m-letizia" target="_blank">My GitHub address</a></span>
+	<span id="github"><a href="https://github.com/m-letizia/ncletiziawebsite.git" target="_blank">My GitHub address</a></span>
 	</body>
 </html>
