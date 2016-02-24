@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="tabs.js"></script>
+    <link href="tabs.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+
+<ul id="tabs">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="assignment.html">Assignments</a></li>
+    <li><a class=" selected" href="quiz.html">Quiz</a></li>
+</ul>
+
+<div class="tabContent" id="usage">
+    <h2>Two truths and a lie- can you guess the right one is the lie?</h2>
+    <div>
+        <button onclick="myOneFunction()">1</button><span> Meghan has a pet fish named felicia.</span>
+        <p><button onclick="myTwoFunction()">2</button><span> Meghan is a twin.</span></p>
+        <p><button onclick="myThreeFunction()">3</button><span> Meghan broke her finger walking up the steps.</span></p>
+
+        <script>
+            function myOneFunction() {
+                alert("Congrats- Meghan does not have a pet fish names Felicia!!!");
+            }
+
+        </script>
+        <script>
+            function myTwoFunction() {
+                alert("This is actually true- Meghan is indeed a twin!!!");
+            }
+
+        </script>
+        <script>
+            function myThreeFunction() {
+                alert("This is actually true, Meghan does not want to admit but she did fall up the stairs and break her finger growing up!");
+            }
+
+        </script>
+    </div>
+</div>
+
+</body>
+</html>
+
+
