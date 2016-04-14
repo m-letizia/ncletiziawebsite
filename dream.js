@@ -24,12 +24,7 @@ function dream(){
 
     //styling dream.. filling colors.. positioning.. showing.. growing..fading
     drawingpix.css({
-        'background-color':color,
-        'border-radius':'100px',
-        '-moz-border-radius': '100px',
-        '-webkit-border-radius': '100px',
-        top: y-14,    //offsets
-        left: x-14 //offsets
+
     }).show().animate({
         height:'500px',
         width:'500px',

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Insert a Class</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="JS/AjaxClass.js" type="text/javascript"></script>
+</head>
+<body onload="onLoad()">
+<div>
+    Course Name: <select id="course_name"> </select> <select id="newParent" class="newcourse_name"> </select> <br>
+    Course Number: <input id="course_number" type=text > <input id="newName" class="newcourse_number" type=text> <br>
+    Course Room: <input id="course_room" type=text > <input id="newWidth" class="newcourse_room" type=text> <br>
+    Course Start Time: <input id="course_start_time" type=text > <input id="newcourse_start_time" class="newValue" type=text> <br>
+    Course End Time: <input id="course_end_time" type=text > <input id="newcouse_end_time" class="newValue" type=text value="0"> <br>
+    Professors First Name: <input id="first_name" type=text > <input id="newfirst_name" class="newValue" type=text value="0"> <br>
+    Professors Last Name: <input id="last_name" type=text > <input id="newlast_name" class="newValue" type=text value="0"> <br>
+    <button type="button" onclick="updateClass()">Save</button> <br>
+    <button type="button" onclick="cancelUpdate()">Cancel</button>
+
+    <p id="results">
+
+    </p>
+
+
+</div>
+</body>
+</html>
