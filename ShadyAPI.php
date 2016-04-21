@@ -37,7 +37,7 @@ function getDatabases() {
 /**
  * @return string
  */
-function insertClass() {
+function insertPlayer() {
     // retrieve and sanitize posted values.
     if (isset($_POST['Team'])) {
         $Team = json_decode(sanitize($_POST['Team']));
