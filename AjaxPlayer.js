@@ -1,7 +1,7 @@
 /**
  * Created by m-letizia on 4/14/2016.
  */
-var player;
+var players;
 
 function onLoad()
 {
@@ -57,11 +57,11 @@ function insertPlayerCallback(response_in)
     }
 }
 
-function showPlayer()
+function showPlayer(players)
 {
     var playerList = "";
 
-    $.each(player, function (key, value)
+    $.each(players, function (key, value)
     {
         var itemString = "";
         $.each(value, function (key, item)
@@ -98,13 +98,13 @@ function ajaxgetPlayer(method, async)
 function getPlayerCallback(response_in)
 {
     var response = JSON.parse(response_in);
-    $player = response["player"];
+    $players = response["players"];
     if (!response['success']) {
         $("#results").html("getPlayer failed");
     } else {
         $('#Team').find('option').remove();
-        showPlayer($player);
-        $.each($player,
+        showPlayer($players);
+        $.each($players,
             function (key, value)
                 /*
                  * - key is the zero based position in the array
@@ -161,14 +161,14 @@ function ajaxupdatePlayer(method)
 function updatePlayerCallback(response_in)
 {
     response = JSON.parse(response_in);
-    $player = response["player"];
+    $players = response["players"];
     if (!response['success'])
     {
         $("#results").html("updatePlayer failed");
     } else
     {
         $("#results").html(response['querystring']);
-        $player = getPlayer();
-        showPlayer($player);
+        $players = getPlayer();
+        showPlayer($players);
     }
 }
