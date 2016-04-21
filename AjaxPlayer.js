@@ -9,10 +9,6 @@ function onLoad()
     //$(".newValue").hide();
 }
 
-
-
-
-
 function ajaxInsertPlayer( Team, first_name, last_name, num_wins, num_loss)
 {
     return $.ajax({
@@ -36,7 +32,7 @@ function insertPlayer()
     last_name = JSON.stringify($('#last_name').val());
     num_wins = JSON.stringify($('#num_wins').val());
     num_loss = JSON.stringify($('#num_loss').val());
-    ajax = ajaxInsertPlayer("insertClass", Team, first_name, last_name, num_wins, num_loss);
+    ajax = ajaxInsertPlayer("insertPlayer", Team, first_name, last_name, num_wins, num_loss);
     ajax.done(insertPlayerCallback);
     ajax.fail(function () {
         alert("Failure");
@@ -143,8 +139,8 @@ function updatePlayer()
     last_name = JSON.stringify($('#last_name').val());
     num_wins = JSON.stringify($('#num_wins').val());
     num_loss = JSON.stringify($('#num_loss').val());
-    ajax = ajaxInsertPlayer("insertClass", Team, first_name, last_name, num_wins, num_loss);
-    ajax = ajaxupdatePlayer("updateClass", Team, first_name, last_name, num_wins, num_loss);
+    ajax = ajaxInsertPlayer("insertPlayer", Team, first_name, last_name, num_wins, num_loss);
+    ajax = ajaxupdatePlayer("updatePlayer", Team, first_name, last_name, num_wins, num_loss);
     ajax.done(updatePlayerCallback);
     ajax.fail(function () {
         alert("Failure");
@@ -165,14 +161,14 @@ function ajaxupdatePlayer(method)
 function updatePlayerCallback(response_in)
 {
     response = JSON.parse(response_in);
-    $class = response["class"];
+    $player = response["player"];
     if (!response['success'])
     {
-        $("#results").html("updateClass failed");
+        $("#results").html("updatePlayer failed");
     } else
     {
         $("#results").html(response['querystring']);
-        $class = getClass();
-        showClass($class);
+        $player = getPlayer();
+        showPlayer($player);
     }
 }

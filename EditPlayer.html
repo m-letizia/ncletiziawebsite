@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Edit a Player</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="JS/AjaxClass.js" type="text/javascript"></script>
+</head>
+<body onload="onLoad()">
+<div>
+    Team: <select id="Team"> </select>  <br>
+    Players First Name: <input id="first_name" type=text > <br>
+    Last Name: <input id="last_name" type=text >  <br>
+    Number of Wins: <input id="num_wins" type=text >  <br>
+    Number of losses: <input id="num_loss" type=text >  <br>
+    <button type="button" onclick="updatePlayer()">Save</button> <br>
+    <button type="button" onclick="cancelUpdate()">Cancel</button>
+
+    <p id="results">
+
+    </p>
+
+
+</div>
+</body>
+</html>
