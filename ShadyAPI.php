@@ -1,6 +1,7 @@
 <?php
 require("DemoCreds.php");
 echo $_POST["method"]();
+
 function sanitize($str, $quotes = ENT_NOQUOTES) {
     $str = htmlspecialchars($str, $quotes);
     return $str;
@@ -39,8 +40,8 @@ function getDatabases() {
  */
 function insertPlayer() {
     // retrieve and sanitize posted values.
-    if (isset($_POST['Team'])) {
-        $Team = json_decode(sanitize($_POST['Team']));
+    if (isset($_POST['team'])) {
+        $team = json_decode(sanitize($_POST['team']));
     }
     if (isset($_POST['first_name'])) {
         $first_name = json_decode(sanitize($_POST['first_name']));
@@ -60,16 +61,25 @@ function insertPlayer() {
         die("Connection failed: " . $dbConn->connect_error);
     }
 
-    $query = "INSERT INTO player_table ( Team, first_name, last_name, num_wins, num_loss) " .
+//    $query = "INSERT INTO player_table ( team, first_name, last_name, num_wins, num_loss) " .
+//        "VALUES ( " .
+//        "" . $team . ", " .
+//        "" . $first_name . ", " .
+//        "" . $last_name . ", " .
+//        "" . $num_wins . ", " .
+//        "" . $num_loss . ");";
+
+
+    $query = "INSERT INTO player_table ( team, first_name, last_name, num_wins, num_loss ) " .
         "VALUES ( " .
-        "" . $Team . ", " .
-        "" . $first_name . ", " .
+        "" . $team . ", " .
+        "'" . $first_name . "', " .
         "" . $last_name . ", " .
         "" . $num_wins . ", " .
         "" . $num_loss . ");";
 
     $result = $dbConn->query($query);
-    $return = new stdPlayer;
+    $return = new stdClass;
     $return->querystring = $query;
     if ($result) {
         //$return->connection = $dbConn;
@@ -106,11 +116,11 @@ function updatePlayer() {
         die("Connection failed: " . $dbConn->connect_error);
     }
     $query = "UPDATE player_table " +
-        "SET Team='" + $newTeam + "'" +
+        "SET team='" + $newTeam + "'" +
         "SET first_name='" + $newfirst_name + "'" +
         "SET last_name='" + $newlast_name + "'" +
         "SET num_wins='" + $newnum_wins + "'" +
-        "SET num_losse='" + $newnum_loss + "'" +
+        "SET num_loss='" + $newnum_loss + "'" +
         "WHERE ID=" + $ID;
     $result = $dbConn->query($query);
     $return = new stdPlayer;
@@ -123,7 +133,7 @@ function updatePlayer() {
     return json_encode($return);
 }
 
-function getPlayer() {
+function getPlayers() {
     $dbConn = mysqli_connect(demoServer(), demoUsername(), demoPassword(), demoDB());
     $query = "SELECT * FROM player_table";
     $result = $dbConn->query($query);
@@ -133,26 +143,60 @@ function getPlayer() {
         $return->success = false;
         return json_encode($return);
     }
-    $player = array();
+    $players = array();
     if ($result) {
         while ($row = $result->fetch_array()) {
             $allColumns = array();
             for ($i = 0; $i < 7; $i++) {
                 array_push($allColumns, $row[$i]);
             }
-            array_push($player, $allColumns);
+            array_push($players, $allColumns);
         }
     }
 
     $return = new StdClass();
     $return->success = true;
-    $return->player = $player;
+    $return->players = $players;
     $return->querystring = $query;
-    $return->credentials =
-        demoUsername() .
-        demoPassword() .
-        demoDB() .
-        " on " .
-        demoServer();
+    // $return->credentials =
+    //    demoUsername() .
+    //   demoPassword() .
+    //  demoDB() .
+    //   " on " .
+    //    demoServer();
+    return json_encode($return);
+}
+
+function getTeams() {
+    $dbConn = mysqli_connect(demoServer(), demoUsername(), demoPassword(), demoDB());
+    $query = "SELECT * FROM team_table";
+    $result = $dbConn->query($query);
+    if ($dbConn->connect_error) {
+        $return = "";
+        $return->connect_error = "Connection failed: " . $dbConn->connect_error;
+        $return->success = false;
+        return json_encode($return);
+    }
+    $teams = array();
+    if ($result) {
+        while ($row = $result->fetch_array()) {
+            $allColumns = array();
+            for ($i = 0; $i < 7; $i++) {
+                array_push($allColumns, $row[$i]);
+            }
+            array_push($players, $allColumns);
+        }
+    }
+
+    $return = new StdClass();
+    $return->success = true;
+    $return->teams = $teams;
+    $return->querystring = $query;
+    // $return->credentials =
+    //    demoUsername() .
+    //   demoPassword() .
+    //  demoDB() .
+    //   " on " .
+    //    demoServer();
     return json_encode($return);
 }
