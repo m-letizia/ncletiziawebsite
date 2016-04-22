@@ -1,56 +1,78 @@
-body 
+
+body
 { 
     font-size: 80%;                         /* Default font and size for page */
-    font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif; 
+    font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif;
+
+
+    background-image: url("Tennis-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    /*background-size: 60%;*/
+    background-color: black;
 }
 ul#tabs 
 { 
     list-style-type: none;                  /* No bullets                     */
     margin: 30px 0 0 0;                     /* Positive top margin            */
-    padding: 0 10px 0.3em 0;                /* Bottom padding on tabs to make */
+    padding: 0 0 0.3em 0;                /* Bottom padding on tabs to make */
                                             /* them adjacent to the content   */
+
+
 }
 ul#tabs li 
 { 
     display: inline;                        /* inside the current block on the same line- smallest possible width. */
-    padding: 12px;                          /* Padding is 12px on all sides                                        */
+    /*padding: 12px;                          /* Padding is 12px on all sides                                        */
 }
 
 ul#tabs li a 
 { 
     color: #42454a;                         /* Color of text is #4245a                                              */
-    background-color: #dedbde;              /* Background color is #dedbde                                          */
+    background-color: #c9c3ba;              /* Background color is #dedbde                                          */
     border: 1px solid #c9c3ba;              /* The tab will have a solid 1px border that is #c9c3ba                 */
     border-bottom: none;                    /* Since you want to see a tab, there should be no bottom line          */
-    border-top-left-radius: 7px;            /* The border will have a rounded top left corner with a radius of 7px  */
-    border-top-right-radius: 7px;           /* The border will have a rounded top right corner with a radius of 7px */
-    padding: 0.3em 2em 0.3em 2em;           /* Shows where the tab will be padded on each side                      */
+    /*border-top-left-radius: 7px;            /* The border will have a rounded top left corner with a radius of 7px  */
+    /*border-top-right-radius: 7px;           /* The border will have a rounded top right corner with a radius of 7px */
+    padding: 0.3em;                         /* Shows where the tab will be padded on each side                      */
     text-decoration: none;                  /* The text will not be harmed                                          */
 
 }
 
 ul#tabs li a:hover 
 { 
-    background-color: #f1f0ee;              /* The background color is going to be #f1f0ee when hovered over */
+    background-color: #b6d0e7;              /* The background color is going to be #f1f0ee when hovered over */
 }
 
 ul#tabs li a.selected 
 { 
     color: #000;                            /* Color of text is #000 or black                  */
-    background-color: #f1f0ee;              /* Background color is #f1f0ee                     */
+    background-color: #c9c3ba;              /* Background color is #f1f0ee                     */
     font-weight: bold;                      /* The font will be bold                           */
     padding: 0.7em 0.3em 0.38em 0.3em;      /* Shows where the tab will be padded on each side */
 }
 
-div.tabContent 
-{ 
-    border: 1px solid #c9c3ba;              /* The tab will have a solid 1px border that is #c9c3ba */
-    padding: 0.5em;                         /* Padding is .5em on all sides                         */
-    padding-bottom: 700px;              /* .5em means 1/2 the size of the current font          */
-    background-color: #f1f0ee;              /* The background color is #f1f0ee                      */
+div.tabContent.hide{
+    display:none;                          /* Hides the element but does not delete it */
 }
 
-div.tabContent.hide 
+div.tabContent
 { 
-    display: none;                          /* Hides the element but does not delete it */
+    border: 1px solid #111111;              /* The tab will have a solid 1px border that is #c9c3ba */
+    padding: 0.5em;                         /* Padding is .5em on all sides                         */
+    padding-bottom: 100px;              /* .5em means 1/2 the size of the current font          */
+    background-color: #c9c3ba;              /* The background color is #f1f0ee                      */
+}
+
+#github{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #c9c3ba;
+    padding: 10px;
+}
+
+#about{
+    background-color: #c9c3ba;
 }

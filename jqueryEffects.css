@@ -13,3 +13,24 @@
     position:absolute;
 
 }
+
+body {
+    font-size: 80%;                         /* Default font and size for page */
+    font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif;
+
+
+    background-image: url("Tennis-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    /*background-size: 60%;*/
+    background-color: black;
+}
+
+#advantages{
+    background-color: #c9c3ba;
+    color: #000;                            /* Color of text is #000 or black                  */
+
+    font-weight: bold;                      /* The font will be bold                           */
+    padding: 0.7em 0.3em 0.38em 0.3em;
+}

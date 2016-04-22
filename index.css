@@ -1,71 +1,70 @@
 
 
-#Tabs ul {
-padding: 0px;
-margin: 0px;
-margin-left: 10px;
-list-style-type: none;
+#about{
+    background-color: #c9c3ba;
 }
 
+body {
+    font-size: 80%;                         /* Default font and size for page */
+    font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif;
 
-#Tabs ul li {
-display: inline-block;
-clear: none;
-float: left;
-height: 24px;
+
+    background-image: url("Tennis-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    /*background-size: 60%;*/
+    background-color: black;
 }
 
-
-#Tabs ul li a {
-position: relative;
-margin-top: 16px;
-display: block;
-margin-left: 6px;
-line-height: 24px;
-padding-left: 10px;
-background: #f6f6f6;
-z-index: 9999;
-border: 1px solid #ccc;
-border-bottom: 0px;
-
-/* The following four lines are to make the top left and top right corners of each tab rounded. */
--moz-border-radius-topleft: 4px;
-border-top-left-radius: 4px;
--moz-border-radius-topright: 4px;
-border-top-right-radius: 4px;
-/* end of rounded borders */
-
-width: 130px;
-color: #000000;
-text-decoration: none;
-font-weight: bold;
+ul#tabs {
+    list-style-type: none;
+    margin: 30px 0 0 0;
+    padding: 0 0 0.3em 0;
 }
 
-#Tabs ul li a:hover {
-text-decoration: underline; // a very simple effect when hovering the mouse on tab
+ul#tabs li {
+    display: inline;
 }
 
-#Tabs #Content_Area { // this is the css class for the content displayed in each tab
-padding: 0 15px;
-clear:both;
-overflow:hidden;
-line-height:19px;
-position: relative;
-top: 20px;
-z-index: 5;
-height: 150px;
-overflow: hidden;
+ul#tabs li a {
+    color: #42454a;
+    background-color: #d0e0e0;
+    border: 1px solid #c9c3ba;
+    border-bottom: none;
+    padding: 0.3em;
+    text-decoration: none;
 }
 
-p { padding-left: 15px; }
+ul#tabs li a:hover {
+    background-color: #b6d0e7;
+}
 
+ul#tabs li a.selected {
+    color: #000;
+    background-color: #c9c3ba;
+    font-weight: bold;
+    padding: 0.7em 0.3em 0.38em 0.3em;
+}
 
+div.tabContent {
+    border: 1px solid #c9c3ba;
+    padding: 0.5em;
+    background-color: #b6d0e7;
+}
+
+div.tabContent.hide {
+    display: none;
+}
 
 #github
 {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #b6d0e7;
+    background-color: #c9c3ba;
     padding: 10px;
 }
+
+
+
