@@ -76,3 +76,10 @@ div.tabContent
 #about{
     background-color: #c9c3ba;
 }
+
+#iframe{
+    border: 1px solid #111111;              /* The tab will have a solid 1px border that is #c9c3ba */
+
+    background-color: #c9c3ba;
+    width: 100%;
+}
