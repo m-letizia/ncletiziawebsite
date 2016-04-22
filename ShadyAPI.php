@@ -1,6 +1,8 @@
+
 <?php
 require("DemoCreds.php");
 echo $_POST["method"]();
+
 
 function sanitize($str, $quotes = ENT_NOQUOTES) {
     $str = htmlspecialchars($str, $quotes);
@@ -35,9 +37,7 @@ function getDatabases() {
     return $json;
 }
 
-/**
- * @return string
- */
+
 function insertPlayer() {
     // retrieve and sanitize posted values.
     if (isset($_POST['team'])) {
@@ -70,13 +70,14 @@ function insertPlayer() {
 //        "" . $num_loss . ");";
 
 
-    $query = "INSERT INTO player_table ( team, first_name, last_name, num_wins, num_loss ) " .
+    $query = "INSERT INTO player_table ( id, first_name, last_name, num_wins, num_loss, team ) " .
         "VALUES ( " .
-        "" . $team . ", " .
+        "". "NULL". ", " .
         "'" . $first_name . "', " .
-        "" . $last_name . ", " .
+        "'" . $last_name . "', " .
         "" . $num_wins . ", " .
-        "" . $num_loss . ");";
+        "" . $num_loss . ", " .
+        "" . $team . ");";
 
     $result = $dbConn->query($query);
     $return = new stdClass;
@@ -200,3 +201,6 @@ function getTeams() {
     //    demoServer();
     return json_encode($return);
 }
+
+
+

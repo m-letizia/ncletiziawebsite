@@ -1,6 +1,10 @@
+
+
 /**
  * Created by m-letizia on 4/14/2016.
  */
+
+
 var players;
 
 function onLoad()
@@ -12,12 +16,13 @@ function onLoad()
     //$(".newValue").hide();
 }
 
-function ajaxInsertPlayer( team, first_name, last_name, num_wins, num_loss)
+function ajaxInsertPlayer( method, team, first_name, last_name, num_wins, num_loss)
 {
     return $.ajax({
         url: 'ShadyAPI.php',
         type: 'POST',
         data: {
+            method: method,
             team: team,
             first_name: first_name,
             last_name: last_name,
@@ -45,7 +50,7 @@ function insertPlayer()
     ajax = ajaxInsertPlayer("insertPlayer", team, first_name, last_name, num_wins, num_loss);
     ajax.done(insertPlayerCallback);
     ajax.fail(function () {
-        alert("Failure");
+        alert("Failure!");
     });
     getPlayers();
 }
@@ -229,3 +234,8 @@ function updatePlayerCallback(response_in)
         showPlayer($players);
     }
 }
+
+
+
+
+
