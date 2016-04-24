@@ -5,10 +5,34 @@
     <title>
       UBER Advertisement!
     </title>
+      <link href="tabs.css" type="text/css" rel="stylesheet"/>
     <link rel="stylesheet" type="text/css" href="uberAd.css" />
   </head>
 
   <body>
+  <div id = "about">
+      <p>Which advertisement is the original?</p>
+
+      <button onclick="myLeftFunction()">Left</button>
+      <button onclick="myRightFunction()">Right</button>
+
+
+      <script>
+          function myLeftFunction() {
+              alert("Nope! Try clicking on the right one!");
+          }
+
+      </script>
+      <script>
+          function myRightFunction() {
+              alert("Great Job! This is the original!");
+          }
+
+      </script>
+
+      <br>
+      <br>
+  </div>
     <div id="assignmentWrapper">
       <div id="uberWrapper">
         <fieldset id="divBorder">
@@ -39,25 +63,7 @@
       </div>
     </div>
 
-    <div>
-  	<p>Which advertisement is the original?</p>
 
- 	 <button onclick="myLeftFunction()">Left</button>
- 	 <button onclick="myRightFunction()">Right</button>
-
- 	 <script>
-  	  function myLeftFunction() {
-   	   alert("Nope! Try clicking on the right one!");
-   	 }
-
-  	</script>
-  	<script>
-  	  function myRightFunction() {
-   	   alert("Great Job! This is the original!");
-   	 }
-
- 	 </script>
-     </div>
 
 
   </body>

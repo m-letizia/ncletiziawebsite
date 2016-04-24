@@ -61,15 +61,6 @@ function insertPlayer() {
         die("Connection failed: " . $dbConn->connect_error);
     }
 
-//    $query = "INSERT INTO player_table ( team, first_name, last_name, num_wins, num_loss) " .
-//        "VALUES ( " .
-//        "" . $team . ", " .
-//        "" . $first_name . ", " .
-//        "" . $last_name . ", " .
-//        "" . $num_wins . ", " .
-//        "" . $num_loss . ");";
-
-
     $query = "INSERT INTO player_table ( id, first_name, last_name, num_wins, num_loss, team ) " .
         "VALUES ( " .
         "". "NULL". ", " .
@@ -159,12 +150,6 @@ function getPlayers() {
     $return->success = true;
     $return->players = $players;
     $return->querystring = $query;
-    // $return->credentials =
-    //    demoUsername() .
-    //   demoPassword() .
-    //  demoDB() .
-    //   " on " .
-    //    demoServer();
     return json_encode($return);
 }
 
